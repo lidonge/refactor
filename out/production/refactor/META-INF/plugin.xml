@@ -1,0 +1,30 @@
+<idea-plugin>
+  <id>com.your.company.unique.plugin.id</id>
+  <name>Refactor</name>
+  <version>1.0</version>
+  <vendor></vendor>
+
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.modules.java</depends>
+
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+    <dom.fileDescription implementation="refactor.mybatis.dom.description.MapperDescription"/>
+
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="BuilRename" class="refactor.ui.ShowRefatorDialogAction" text="BuldRename" description="Rename for luna-web">
+      <add-to-group group-id="ToolsMenu" anchor="first"/>
+    </action>
+  </actions>
+
+</idea-plugin>
