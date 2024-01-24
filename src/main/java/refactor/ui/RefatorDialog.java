@@ -8,7 +8,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import refactor.BatchRefactor;
 
-import javax.annotation.Nullable;
 import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
@@ -31,7 +30,6 @@ public class RefatorDialog extends DialogWrapper implements DocumentListener {
     init();
   }
 
-  @Nullable
   @Override
   protected JComponent createCenterPanel() {
     TextFieldWithBrowseButton csvFileChooser = new TextFieldWithBrowseButton();
